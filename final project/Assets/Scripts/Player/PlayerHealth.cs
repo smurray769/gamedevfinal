@@ -4,38 +4,37 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] int maxHealth;
-    [SerializeField] int currentHealth;
-
-    //getters
-    int getCurrentHealth() { return currentHealth; }
-    int getMaxHealth() { return maxHealth; }
-    
-    //setters
-    void setCurrentHealth(int num) { currentHealth = num; }
-    void setMaxHealth(int num) { maxHealth = num; currentHealth = maxHealth; }
+    [SerializeField] PlayerData pd;
 
     //easily increase max health (sets current health = max)
-    void increaseMaxHealth(int num) { maxHealth += num; currentHealth = maxHealth;}
-
-    //quickly reset current health to max
-    void fullHeal() { currentHealth = maxHealth; }
-
-    void heal(int num)
+    void increaseMaxHealth(int num) 
     {
-        if ( currentHealth + num < maxHealth)
-        {
-            currentHealth += num;
-        }
-        else
-        {
-            currentHealth = maxHealth;
-        }
+        pd.maxHealth += num;
+        pd.currentHealth = pd.maxHealth;
     }
 
-    void damage(int num)
+    void fullHeal()
     {
-        currentHealth-= num;
+        pd.currentHealth = pd.maxHealth;
     }
 
+    void incrementHealth()
+    {
+        pd.currentHealth++;
+    }
+
+    void decrementHealth()
+    {
+        pd.currentHealth--;
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "EnemyProjectile" || other.tag == "Enemy")
+        {
+            decrementHealth();
+            Debug.Log(pd.currentHealth);
+            Destroy(other.gameObject);
+        }
+    }
 }

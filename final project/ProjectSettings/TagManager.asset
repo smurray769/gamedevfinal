@@ -9,6 +9,7 @@ TagManager:
   - EnemyBoundary
   - Projectile
   - EnemyProjectile
+  - ShootinRange
   layers:
   - Default
   - TransparentFX
