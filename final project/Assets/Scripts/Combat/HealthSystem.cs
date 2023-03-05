@@ -26,6 +26,7 @@ public class HealthSystem : MonoBehaviour
         {
             health-=25;
             Debug.Log("Ow!");
+            Destroy(other.gameObject);
         }
     }
 }
