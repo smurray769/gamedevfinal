@@ -5,12 +5,16 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private Animator animator;
     
 
     //variables for L/R movements
     public float runSpeed;
     float horizontalMove = 0f;
     bool playerFacingRight = true;
+
+    //debug
+    public float shpeed;
     
 
 
@@ -18,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -41,6 +46,9 @@ public class PlayerMovement : MonoBehaviour
         {
             Flip();
         }
+
+        animator.SetFloat("Speed", getCurrentSpeed());
+        shpeed = getCurrentSpeed();
     }
 
     void Move()
@@ -53,5 +61,10 @@ public class PlayerMovement : MonoBehaviour
         playerFacingRight= !playerFacingRight;
 
         transform.Rotate (0f, 180f, 0f);
+    }
+
+    float getCurrentSpeed()
+    {
+        return Mathf.Abs(rb.velocity.x);
     }
 }

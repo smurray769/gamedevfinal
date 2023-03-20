@@ -6,12 +6,19 @@ public class Weapon : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject projectilePrefab;
+    Animator animator;
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetButtonDown("Fire1")) 
         {
+            animator.SetTrigger("isShooting");
             Shoot();
         }
     }

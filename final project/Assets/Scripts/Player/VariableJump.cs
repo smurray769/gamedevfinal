@@ -4,17 +4,25 @@ using UnityEngine;
 
 public class VariableJump : MonoBehaviour
 {
-    public Rigidbody2D rb;
+    Rigidbody2D rb;
+    public LayerMask groundLayer;
     public float buttonTime = 0.5f;
-    public float jumpHeight = 5;
+    public float jumpHeight = 5.0f;
     public float cancelRate = 100;
     float jumpTime;
     bool jumping;
     bool jumpCancelled;
-    bool isGrounded;
+    Animator animator;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+    }
+
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
             float jumpForce = Mathf.Sqrt(jumpHeight * -2 * (Physics2D.gravity.y * rb.gravityScale));
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
@@ -34,6 +42,7 @@ public class VariableJump : MonoBehaviour
                 jumping = false;
             }
         }
+        animator.SetBool("isJumping", jumping);
     }
     private void FixedUpdate()
     {
@@ -43,20 +52,24 @@ public class VariableJump : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other) 
+    bool IsGrounded() 
     {
-        if (other.tag == "Platforms") 
-        {
-            isGrounded = true;
-        }
-    }
+        Vector2 position = transform.position;
+        Vector2 direction = Vector2.down;
+        float distance = jumpHeight;
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.tag == "Platforms")
-        {
-            isGrounded = false;
+        Debug.DrawRay(position, direction, Color.green);
+        
+        RaycastHit2D hit = Physics2D.Raycast(position, direction, distance, groundLayer);
+
+        
+
+        //pretty sure i can do this without if statement but leaving it in for testing first
+        if (hit.collider != null) {
+            return true;
         }
+        
+        return false;
     }
 }
 
