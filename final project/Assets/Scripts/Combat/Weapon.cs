@@ -7,6 +7,8 @@ public class Weapon : MonoBehaviour
     public Transform firePoint;
     public GameObject projectilePrefab;
     Animator animator;
+    bool shooting;
+    float frames;
 
     void Start()
     {
@@ -16,11 +18,16 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (shooting == true)
+            frames++;
+            
         if (Input.GetButtonDown("Fire1")) 
         {
+            shooting = true;
             animator.SetTrigger("isShooting");
             Shoot();
         }
+        
     }
 
     void Shoot()

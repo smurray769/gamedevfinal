@@ -10409,6 +10409,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &1148083161 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3876851286361863224, guid: 00f2b61c81588de47baa3c6294bcd6b8, type: 3}
+  m_PrefabInstance: {fileID: 1823550864}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1148083164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148083161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a8a05de0ac134f4f9d01bef6b9da077, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1292768361
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10545,6 +10562,7 @@ GameObject:
   - component: {fileID: 1754961918}
   - component: {fileID: 1754961921}
   - component: {fileID: 1754961922}
+  - component: {fileID: 1754961923}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -10587,7 +10605,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.6458335
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -10685,6 +10703,29 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1754961923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754961917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c88f5cead0c0b2a4eb05b5900433f8d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ComponentVersion: 1
+  m_AssetsPPU: 16
+  m_RefResolutionX: 320
+  m_RefResolutionY: 180
+  m_CropFrame: 0
+  m_GridSnapping: 0
+  m_UpscaleRT: 0
+  m_PixelSnapping: 0
+  m_CropFrameX: 0
+  m_CropFrameY: 0
+  m_StretchFill: 0
 --- !u!1001 &1823550864
 PrefabInstance:
   m_ObjectHideFlags: 0
