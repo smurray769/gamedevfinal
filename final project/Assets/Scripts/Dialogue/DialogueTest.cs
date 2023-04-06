@@ -37,7 +37,7 @@ public class DialogueTest : MonoBehaviour
     {
         if(DialogManager.Result == "Continue")
         {
-            SceneManager.LoadScene("StartScene");
+            SceneManager.LoadScene("AreaOne");
         }
         else if (DialogManager.Result == "Refuse")
         {

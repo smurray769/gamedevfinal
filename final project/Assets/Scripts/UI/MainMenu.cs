@@ -9,6 +9,17 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Intro");
     }
 
+    void OpenOptions()
+    {
+        GetComponent<Canvas>().enabled = true;   
+    }
+
+    // Update is called once per frame
+    void CloseOptions()
+    {
+        GetComponent<Canvas>().enabled = false;
+    }
+
     public void QuitGame() {
         Application.Quit();
     }

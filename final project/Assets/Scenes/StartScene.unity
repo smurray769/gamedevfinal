@@ -10409,23 +10409,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!1 &1148083161 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3876851286361863224, guid: 00f2b61c81588de47baa3c6294bcd6b8, type: 3}
-  m_PrefabInstance: {fileID: 1823550864}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1148083164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1148083161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a8a05de0ac134f4f9d01bef6b9da077, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1292768361
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10433,22 +10416,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1831541274, guid: fdd10961a808b1c43889d6222ff41555, type: 3}
-      propertyPath: m_Size.x
-      value: 0.3820815
-      objectReference: {fileID: 0}
-    - target: {fileID: 1831541274, guid: fdd10961a808b1c43889d6222ff41555, type: 3}
-      propertyPath: m_Size.y
-      value: 0.9984133
-      objectReference: {fileID: 0}
-    - target: {fileID: 1831541274, guid: fdd10961a808b1c43889d6222ff41555, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.000027894974
-      objectReference: {fileID: 0}
-    - target: {fileID: 1831541274, guid: fdd10961a808b1c43889d6222ff41555, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.01542151
-      objectReference: {fileID: 0}
     - target: {fileID: 3493933402328556058, guid: fdd10961a808b1c43889d6222ff41555, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -10493,10 +10460,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3493933402328556059, guid: fdd10961a808b1c43889d6222ff41555, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -441359140, guid: 5f6a99ee70fc06443925fd36131adf61, type: 3}
     - target: {fileID: 3493933402328556070, guid: fdd10961a808b1c43889d6222ff41555, type: 3}
       propertyPath: m_Name
       value: player
@@ -10737,10 +10700,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3876851285379162648, guid: 00f2b61c81588de47baa3c6294bcd6b8, type: 3}
-      propertyPath: m_ScreenY
-      value: 0.65
-      objectReference: {fileID: 0}
     - target: {fileID: 3876851286361863224, guid: 00f2b61c81588de47baa3c6294bcd6b8, type: 3}
       propertyPath: m_Name
       value: CMCam

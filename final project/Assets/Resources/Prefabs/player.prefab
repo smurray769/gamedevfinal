@@ -78,6 +78,7 @@ GameObject:
   - component: {fileID: 2054132397}
   - component: {fileID: 1831541274}
   - component: {fileID: 1831541273}
+  - component: {fileID: 4027171006374416464}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -143,7 +144,7 @@ SpriteRenderer:
   m_SortingLayerID: 1043565081
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 10fb173bfb6496b409f1fd2387c8a0fc, type: 3}
+  m_Sprite: {fileID: -441359140, guid: 5f6a99ee70fc06443925fd36131adf61, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -187,7 +188,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fba9e85580c544d41a840479cfa002fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 3493933402328556057}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -207,6 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 30
+  shpeed: 0
 --- !u!114 &2054132397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,8 +235,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.12086117, y: -0.68369865}
-  m_Size: {x: 1.0972931, y: 2.837903}
+  m_Offset: {x: 0.000027894974, y: -0.01542151}
+  m_Size: {x: 0.3820815, y: 0.9984133}
   m_Direction: 0
 --- !u!95 &1831541273
 Animator:
@@ -257,3 +258,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4027171006374416464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3493933402328556070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2899a3cdb9ac857439e05e6401050da9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pd: {fileID: 11400000, guid: 1e13ed0cd913b94498dbd780c2da35c5, type: 2}

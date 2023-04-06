@@ -12,11 +12,9 @@ public class VariableJump : MonoBehaviour
     float jumpTime;
     bool jumping;
     bool jumpCancelled;
-    Animator animator;
 
     private void Start()
     {
-        animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -42,7 +40,6 @@ public class VariableJump : MonoBehaviour
                 jumping = false;
             }
         }
-        animator.SetBool("isJumping", jumping);
     }
     private void FixedUpdate()
     {
@@ -56,13 +53,11 @@ public class VariableJump : MonoBehaviour
     {
         Vector2 position = transform.position;
         Vector2 direction = Vector2.down;
-        float distance = jumpHeight;
+        float distance = 1.0f;
 
         Debug.DrawRay(position, direction, Color.green);
         
         RaycastHit2D hit = Physics2D.Raycast(position, direction, distance, groundLayer);
-
-        
 
         //pretty sure i can do this without if statement but leaving it in for testing first
         if (hit.collider != null) {
