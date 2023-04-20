@@ -9,6 +9,10 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Intro");
     }
 
+    public void Restart() {
+        SceneManager.LoadScene("AreaOne");
+    }
+
     void OpenOptions()
     {
         GetComponent<Canvas>().enabled = true;   
