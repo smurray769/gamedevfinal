@@ -18,7 +18,6 @@ public class MainMenu : MonoBehaviour
         GetComponent<Canvas>().enabled = true;   
     }
 
-    // Update is called once per frame
     void CloseOptions()
     {
         GetComponent<Canvas>().enabled = false;
