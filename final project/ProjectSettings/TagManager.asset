@@ -10,6 +10,8 @@ TagManager:
   - Projectile
   - EnemyProjectile
   - ShootinRange
+  - Pause
+  - Options
   layers:
   - Default
   - TransparentFX
