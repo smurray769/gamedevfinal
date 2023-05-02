@@ -452,13 +452,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 858655826}
   m_HandleRect: {fileID: 555498374}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 0
   m_WholeNumbers: 0
-  m_Value: 0.25
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1144892136}
+        m_TargetAssemblyTypeName: OptionsMenu, Assembly-CSharp
+        m_MethodName: SetAtmosphereVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &83818206
 GameObject:
   m_ObjectHideFlags: 0
@@ -2452,13 +2464,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 1024668119}
   m_HandleRect: {fileID: 358172037}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 0
   m_WholeNumbers: 0
-  m_Value: 0.25
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1144892136}
+        m_TargetAssemblyTypeName: OptionsMenu, Assembly-CSharp
+        m_MethodName: SetMusicVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &807999382
 GameObject:
   m_ObjectHideFlags: 0
@@ -3438,6 +3462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb03800e8360e284d844ebc46b5ca1c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: b0e9d24cbcba6254aa7bb839d55a7641, type: 2}
 --- !u!1001 &1165940149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4497,13 +4522,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 906795773}
   m_HandleRect: {fileID: 1296991627}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 0
   m_WholeNumbers: 0
-  m_Value: 0.25
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1144892136}
+        m_TargetAssemblyTypeName: OptionsMenu, Assembly-CSharp
+        m_MethodName: SetSFXVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1661463316
 GameObject:
   m_ObjectHideFlags: 0
@@ -4612,7 +4649,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.25, y: 1}
+  m_AnchorMax: {x: 0.82, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5007,7 +5044,7 @@ AudioSource:
   m_GameObject: {fileID: 1883277816}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: b0e9d24cbcba6254aa7bb839d55a7641, type: 2}
+  OutputAudioMixerGroup: {fileID: -4732865882369881352, guid: b0e9d24cbcba6254aa7bb839d55a7641, type: 2}
   m_audioClip: {fileID: 8300000, guid: 930005232e640744a9fb61ff8b3c8e11, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.25
@@ -5103,7 +5140,7 @@ AudioSource:
   m_GameObject: {fileID: 1883277816}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: b0e9d24cbcba6254aa7bb839d55a7641, type: 2}
+  OutputAudioMixerGroup: {fileID: 7086500242394671312, guid: b0e9d24cbcba6254aa7bb839d55a7641, type: 2}
   m_audioClip: {fileID: 8300000, guid: 51de1a2dc4c8564459c4da5726721f62, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.25
@@ -9559,8 +9596,8 @@ RectTransform:
   m_Father: {fileID: 83818207}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.25, y: 0}
-  m_AnchorMax: {x: 0.25, y: 1}
+  m_AnchorMin: {x: 0.82, y: 0}
+  m_AnchorMax: {x: 0.82, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -9686,13 +9723,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 1669324648}
   m_HandleRect: {fileID: 2078519089}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 0
   m_WholeNumbers: 0
-  m_Value: 0.25
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1144892136}
+        m_TargetAssemblyTypeName: OptionsMenu, Assembly-CSharp
+        m_MethodName: SetMasterVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &2111949612 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5246868083851783444, guid: 30b9303f83fa1814c8bf99202edcb82c, type: 3}
