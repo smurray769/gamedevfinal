@@ -6,6 +6,7 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
+    public GameObject OptionsMenu;
 
     void Update()
     {
@@ -42,6 +43,6 @@ public class PauseMenu : MonoBehaviour
 
     public void OpenOptions()
     {
-        GetComponent<Canvas>().enabled = true;   
+        OptionsMenu.SetActive(true); 
     }
 }

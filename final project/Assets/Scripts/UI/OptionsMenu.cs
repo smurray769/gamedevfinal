@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class OptionsMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    //resolution
+    
+    //volume
 
-    // Update is called once per frame
-    void Update()
+    //back button
+    public void GoBack()
     {
-        
+        this.gameObject.SetActive(false);
     }
 }
