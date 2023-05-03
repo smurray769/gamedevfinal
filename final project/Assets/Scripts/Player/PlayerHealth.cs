@@ -57,7 +57,11 @@ public class PlayerHealth : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        
+        if (other.tag == "Door")
+        {
+            Debug.Log("touched the door");
+            SceneManager.LoadScene("End");
+        }
     }
 
     void checkForDead()
@@ -65,4 +69,5 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0)
             SceneManager.LoadScene("Dead");
     }
+
 }
