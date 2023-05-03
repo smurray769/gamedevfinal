@@ -79,6 +79,7 @@ GameObject:
   - component: {fileID: 1831541274}
   - component: {fileID: 1831541273}
   - component: {fileID: 4027171006374416464}
+  - component: {fileID: 975922887}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -271,4 +272,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2899a3cdb9ac857439e05e6401050da9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pd: {fileID: 11400000, guid: 1e13ed0cd913b94498dbd780c2da35c5, type: 2}
+  currentHealth: 5
+  maxHealth: 5
+--- !u!70 &975922887
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3493933402328556070}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1, y: 1}
+  m_Direction: 0

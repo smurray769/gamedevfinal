@@ -5,44 +5,64 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] PlayerData pd;
-    int currentHealth = 5;
+    public int currentHealth = 5;
+    public int maxHealth = 5;
 
     void Start()
     {
-        currentHealth = pd.maxHealth;
+        currentHealth = maxHealth;
     }
 
     //easily increase max health (sets current health = max)
-    void increaseMaxHealth(int num) 
+    public void increaseMaxHealth(int num) 
     {
-        pd.maxHealth += num;
-        pd.currentHealth = pd.maxHealth;
+        maxHealth += num;
+        currentHealth = maxHealth;
     }
 
-    void fullHeal()
+    public void fullHeal()
     {
-        currentHealth = pd.maxHealth;
+        currentHealth = maxHealth;
     }
 
-    void incrementHealth()
+    public void incrementHealth()
     {
         currentHealth++;
     }
 
-    void decrementHealth()
+    public void decrementHealth()
     {
         currentHealth--;
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "EnemyProjectile" || other.tag == "Enemy")
+        if (other.tag == "EnemyProjectile")
         {
             decrementHealth();
             Destroy(other.gameObject);
-            if (currentHealth <= 0)
-                SceneManager.LoadScene("Dead");
+            checkForDead();
         }
+
+        if (other.tag == "Enemy")
+        {
+            decrementHealth();
+            checkForDead();
+        }
+
+        if (other.tag == "SmallHeart")
+        {
+            if (currentHealth < maxHealth)
+                incrementHealth();
+            Destroy(other.gameObject);
+        }
+
+        
+    }
+
+    void checkForDead()
+    {
+        if (currentHealth <= 0)
+            SceneManager.LoadScene("Dead");
     }
 }

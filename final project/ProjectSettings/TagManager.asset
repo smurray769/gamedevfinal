@@ -12,6 +12,8 @@ TagManager:
   - ShootinRange
   - Pause
   - Options
+  - SmallHeart
+  - BigHeart
   layers:
   - Default
   - TransparentFX
